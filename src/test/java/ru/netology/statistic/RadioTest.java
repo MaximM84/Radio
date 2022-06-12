@@ -70,7 +70,7 @@ public class RadioTest {
     @Test
     void shouldSetVolumeIfVolumeIsOverMax() {
         Radio radio = new Radio();
-        int volume = 11;
+        int volume = 101;
         radio.setVolume(volume);
         int expected = 0;
         assertEquals(expected, radio.getVolume());
@@ -88,10 +88,10 @@ public class RadioTest {
     @Test
     void shouldNotChangeVolumeIfVolumeIsMax() {
         Radio radio = new Radio();
-        int volume = 10;
+        int volume = 100;
         radio.setVolume(volume);
         radio.volumeUpForOne();
-        int expected = 10;
+        int expected = 100;
         assertEquals(expected, radio.getVolume());
     }
 
@@ -129,4 +129,3 @@ public class RadioTest {
     }
 
 }
-
